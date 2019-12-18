@@ -1,9 +1,19 @@
+const { readFileSync } = require('fs');
+const path = require('path');
+
 const express = require('express');
+var HttpStatus = require('http-status-codes');
+
 const app = express();
+const infoData = readFileSync(path.join(__dirname, 'resources', 'instructions.txt'));
 
 app.get('/', (req, res) => {
     res.set('Content-Type', 'text/plain');
-    res.sendStatus(200);
+    res.send(infoData);
 });
+
+app.use((req, res) => {
+    res.sendStatus(HttpStatus.NOT_FOUND);
+})
 
 module.exports = app;
