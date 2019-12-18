@@ -2,12 +2,17 @@ const { readFileSync } = require('fs');
 const path = require('path');
 
 const express = require('express');
-var HttpStatus = require('http-status-codes');
+const HttpStatus = require('http-status-codes');
+const cors = require('cors');
+const helmet = require('helmet');
 
 const app = express();
 const infoData = readFileSync(path.join(__dirname, 'resources', 'instructions.txt'));
 
 const baseStationController = require('./controllers/basestation');
+
+app.use(cors());
+app.use(helmet());
 
 app.get('/', (req, res) => {
     res.set('Content-Type', 'text/plain');
