@@ -1,4 +1,4 @@
-const commands = ['L', 'R'];
+const { commands, orientationCommands } = require('./commands');
 
 const orientation = {
     N: { L: 'W', R: 'E' },
@@ -12,7 +12,7 @@ const change = (currentOrientation, direction) => {
 };
 
 const isOrientationCommand = (command) => {
-    return commands.includes(command)
+    return orientationCommands.includes(command);
 }
 
 module.exports = {

@@ -1,13 +1,8 @@
-const orientation = require('../domain/orientation');
-
-const commands = {
-    right: 'R',
-    left: 'L'
-};
-
+const orientation  = require('../domain/orientation');
+const { commands }  = require('../domain/commands');
 
 describe('change', () => {
-    it('should return the correct diretion', () => {
+    it('should return the correct direction', () => {
         const currentOrientation = 'N';
         
         let newOrientation = orientation.change(currentOrientation, commands.right);

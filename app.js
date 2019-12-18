@@ -9,7 +9,7 @@ const helmet = require('helmet');
 const app = express();
 const infoData = readFileSync(path.join(__dirname, 'resources', 'instructions.txt'));
 
-const baseStationController = require('./controllers/basestation');
+const baseStationController = require('./controllers/basestation.controller');
 
 app.use(cors());
 app.use(helmet());
