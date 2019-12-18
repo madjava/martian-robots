@@ -1,7 +1,4 @@
 const orientationCommands = ['L', 'R'];
-
-const moveCommands = ['F'];
-
 const commands = {
     right: 'R',
     left: 'L'
@@ -9,6 +6,5 @@ const commands = {
 
 module.exports = {
     orientationCommands,
-    moveCommands,
     commands
 }

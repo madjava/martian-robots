@@ -1,16 +1,6 @@
-
-// const basestationCommands = {
-//     area: { top: 3, right: 5 },
-//     robots: [
-//         {
-//             position: { x: 1, y: 1, orientation: 'N' },
-//             instructions: ['F', 'R']
-//         },
-//     ]
-// };
-
 const Robot = require('../domain/robot');
 const orientations = require('../domain/orientation');
+const { moveCommands } = require('../domain/commands');
 
 const proccesCommands = async (commands) => {
     if (!commands.area || !commands.robots || commands.robots.length === 0) {
@@ -25,17 +15,17 @@ const proccesCommands = async (commands) => {
         const instructions = robotCommand.instructions;
 
         const robot = new Robot(x, y, orientation);
-
         instructions.forEach((instruction) => {
             if (orientations.isOrientationCommand(instruction)) {
                 const newOrientation = orientations.change(robot.orientation, instruction);
                 robot.setOrientation(newOrientation);
-            } else {
-                robot.move();
             }
+            robot.move();
         });
+
         robots.push(robot);
     });
+
     return robots.map(r => r.toString());;
 }
 
