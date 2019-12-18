@@ -12,7 +12,7 @@ const basestationCommands = {
 }
 
 describe('POST /basestation',  () => {
-    it('responds with service instructions as text', (done) => {
+    it('responds with service instructions as json', (done) => {
         request(app)
             .post('/basestation')
             .send(basestationCommands)
