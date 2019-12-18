@@ -4,7 +4,12 @@
   "description": "Simple Web Service that receives a set of instructions/commands to move the robots on Mars.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=production node server.js",
+    "test": "jest --onlyChanged --detectOpenHandles  --runInBand --verbose",
+    "test-watch": "jest --runInBand --watch --onlyChanged --detectOpenHandles"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
@@ -20,5 +25,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-validator": "^6.3.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
   }
 }
