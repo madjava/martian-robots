@@ -1,7 +1,7 @@
 const request = require('supertest');
 const app = require('../app');
 
-describe('GET /', function () {
+describe('GET /',  () => {
     it('responds with service instructions as text', (done) => {
         request(app)
             .get('/')
