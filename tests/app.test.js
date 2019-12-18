@@ -17,11 +17,3 @@ describe('GET /nonexist', () => {
             .expect(404, done);
     });
 });
-
-describe('POST /basestation', () => {
-    it('responds with 200', (done) => {
-        request(app)
-            .post('/basestation')
-            .expect(200, done);
-    });
-});

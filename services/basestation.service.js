@@ -1,4 +1,4 @@
-const proccesCommands = () => {
+const proccesCommands = async () => {
     return ['1 2 E'];
 }
 
