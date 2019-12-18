@@ -1,7 +1,7 @@
 module.exports = class Robot {
     constructor(x, y, orientation) {
-        this.x = x;
-        this.y = y;
+        this.x = parseInt(x, 10);
+        this.y = parseInt(y, 10);
         this.orientation = orientation;
         this.lost = false;
     }
@@ -25,5 +25,9 @@ module.exports = class Robot {
                 this.x = this.x - 1;
                 break;
         }
+    }
+
+    toString() {
+        return `${this.x} ${this.y} ${this.orientation} ${(this.lost || '')}`.trim();
     }
 }
