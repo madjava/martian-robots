@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
     res.send(infoData);
 });
 
+app.post('/basestation', (req, res) => {
+    res.sendStatus(200);
+});
+
 app.use((req, res) => {
     res.sendStatus(HttpStatus.NOT_FOUND);
 })

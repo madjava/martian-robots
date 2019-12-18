@@ -21,7 +21,7 @@ describe('GET /nonexist', () => {
 describe('POST /basestation', () => {
     it('responds with 200', (done) => {
         request(app)
-            .get('/basestation')
+            .post('/basestation')
             .expect(200, done);
     });
 });
