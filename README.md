@@ -1,6 +1,6 @@
 # martian-robots challenge
 
-The martian-robots challenge has been implemented as a REST service that recives instructions from a client and executes those instrcutions to move the robots to requested location.
+The martian-robots challenge has been implemented as a REST service that recieves instructions from a client and executes those instrcutions to move the robots to requested location.
 
 ## Getting set up
 
@@ -10,13 +10,13 @@ The martian-robots challenge has been implemented as a REST service that recives
     ```bash
     npm i
     ```
-    It is assumed that [Node](https://nodejs.org/en/download/) has be installed on your machine
+    It is assumed that [Node](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com) has be installed on your machine
 3. To start the service run the command:
     
     ```bash
     npm start
     ```
-    Service should start on the default port which is set to `3000`. If you prefare to use another port then spwecify your desired port like so:
+    Service should start on the default port which is set to `3000`. If you prefare to use another port then specify your desired port like so:
 
     ```bash
     PORT=<your port> npm start
@@ -33,7 +33,9 @@ Will return some basic instructions on the expected payload
 `POST /basestation`
 
 Will expect a payload with commands for the robots, what orientation to take and how many points to move
-  
+
+Any other route would return a `404`
+
 ## Test
 To run all test cases
 
@@ -41,8 +43,8 @@ To run all test cases
 npm test
 ```
 
-would execute all exeiting tests. [Jest](https://jestjs.io/en/) was used are the test runner
+This would execute all existing tests. [Jest](https://jestjs.io/en/) was used are the test runner
 
 # Instructions
 
-After the service is up and running, navigate to `/` path for futher imformation e.g `http://localhost:3000` or whatever port you may have specified
+After the service is up and running, navigate to `/` path for futher information e.g `http://localhost:3000` or whatever port you may have specified
