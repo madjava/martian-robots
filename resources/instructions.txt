@@ -1,1 +1,42 @@
-This is where info will live
+The there are two endpoint on this service
+
+GET /
+Returns some baisc instructions
+ 
+POST /basestation
+PAYLOAD:
+{
+     area: { top: 3, right: 5 },
+     robots: [
+          {
+              position: { x: 1, y: 1, orientation: 'N' },
+              instructions: ['F', 'R', ...]
+          },
+          ...
+      ]
+ }
+
+RESPONSE: 
+  ['1 1 E',...]
+
+You can use Postman or Curl to send you commands to the service.
+
+An example command payload looks like this:
+
+POST /basestation
+{
+     area: { top: 3, right: 5 },
+     robots: [
+          {
+              position: { x: 1, y: 1, orientation: 'N' },
+              instructions: ['F', 'R']
+          }
+      ]
+ }
+
+RESPONSE:
+  ['1 2 E']
+
+Responses is a list containing the positions of the robots after executing the provided command.
+
+The application assumes bottom is 0 and left is 0.

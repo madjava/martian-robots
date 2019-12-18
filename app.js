@@ -11,6 +11,7 @@ const infoData = readFileSync(path.join(__dirname, 'resources', 'instructions.tx
 
 const baseStationController = require('./controllers/basestation.controller');
 
+app.use(express.json());
 app.use(cors());
 app.use(helmet());
 
