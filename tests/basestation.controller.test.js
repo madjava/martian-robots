@@ -15,6 +15,7 @@ const basestationCommands = {
 
 
 describe('POST /basestation', () => {
+    
     beforeEach(() => {
         basestationService.proccesCommands.mockClear();
     });
@@ -31,6 +32,7 @@ describe('POST /basestation', () => {
     it('should respond with correct data after executing commands', () => {
         const baseStationResponse = ['1 2 E'];
         basestationService.proccesCommands.mockReturnValue(Promise.resolve(baseStationResponse));
+
         return request(app)
             .post('/basestation')
             .send(basestationCommands)
