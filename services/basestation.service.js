@@ -11,16 +11,22 @@ const proccesCommands = async (commands) => {
     const { top, right } = commands.area;
 
     commands.robots.forEach((robotCommand) => {
+
         const { x, y, orientation } = robotCommand.position;
         const instructions = robotCommand.instructions;
 
-        const robot = new Robot(x, y, orientation);
+        const robot = new Robot(x, y, orientation, top, right);
         instructions.forEach((instruction) => {
-            if (orientations.isOrientationCommand(instruction)) {
-                const newOrientation = orientations.change(robot.orientation, instruction);
-                robot.setOrientation(newOrientation);
+            switch (instruction) {
+                case 'L':
+                case 'R':
+                    const newOrientation = orientations.change(robot.orientation, instruction);
+                    robot.setOrientation(newOrientation);
+                    break;
+                case 'F':
+                    robot.move();
+                    break;
             }
-            robot.move();
         });
 
         robots.push(robot);

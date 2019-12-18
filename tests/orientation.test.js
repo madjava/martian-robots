@@ -28,5 +28,6 @@ describe('isOrientationCommand', () => {
         expect(orientation.isOrientationCommand('L')).toBe(true);
         expect(orientation.isOrientationCommand('R')).toBe(true);
         expect(orientation.isOrientationCommand('K')).toBe(false);
+        expect(orientation.isOrientationCommand('')).toBe(false);
     })
 });

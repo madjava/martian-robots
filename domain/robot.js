@@ -1,8 +1,10 @@
 module.exports = class Robot {
-    constructor(x, y, orientation) {
+    constructor(x, y, orientation, top, right) {
         this.x = parseInt(x, 10);
         this.y = parseInt(y, 10);
         this.orientation = orientation;
+        this.top = top;
+        this.right = right;
         this.lost = false;
     }
 
@@ -11,6 +13,10 @@ module.exports = class Robot {
     }
 
     move() {
+        if(this.x > this.right || this.y > this.top){
+            this.lost = 'LOST';
+            return;
+        }
         switch (this.orientation) {
             case 'N':
                 this.y = this.y + 1;
