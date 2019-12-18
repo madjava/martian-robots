@@ -22,7 +22,8 @@ The martian-robots challenge has been implemented as a REST service that recives
     PORT=<your port> npm start
     ```
 
-## The application endpoints
+## The Application Endpoints
+
 The service has two endpoints only
 
 `GET /`
@@ -33,5 +34,15 @@ Will return some basic instructions on the expected payload
 
 Will expect a payload with commands for the robots, what orientation to take and how many points to move
   
+## Test
+To run all test cases
 
+```bash
+npm test
+```
 
+would execute all exeiting tests. [Jest](https://jestjs.io/en/) was used are the test runner
+
+# Instructions
+
+After the service is up and running, navigate to `/` path for futher imformation e.g `http://localhost:3000` or whatever port you may have specified

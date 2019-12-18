@@ -24,6 +24,6 @@ app.get('/', (req, res) => {
 
 app.use((req, res) => {
     res.sendStatus(HttpStatus.NOT_FOUND);
-})
+});
 
 module.exports = app;

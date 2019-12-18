@@ -31,5 +31,4 @@ describe('proccesCommands', () => {
             expect(data).toEqual(expect.arrayContaining(baseStationResponse));
         });
     });
-
 });
