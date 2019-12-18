@@ -25,11 +25,11 @@ An example command payload looks like this:
 
 POST /basestation
 {
-     area: { top: 3, right: 5 },
-     robots: [
+     "area": { "top": 3, "right": 5 },
+     "robots": [
           {
-              position: { x: 1, y: 1, orientation: 'N' },
-              instructions: ['F', 'R']
+              "position": { "x": 1, "y": 1, "orientation": "N" },
+              "instructions": ["F", "R"]
           }
       ]
  }
