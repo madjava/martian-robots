@@ -1,0 +1,20 @@
+{
+  "name": "martian-robots",
+  "version": "1.0.0",
+  "description": "Simple Web Service that receives a set of instructions/commands to move the robots on Mars.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madjava/martian-robots.git"
+  },
+  "keywords": [],
+  "author": "Felix E. Eyetan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madjava/martian-robots/issues"
+  },
+  "homepage": "https://github.com/madjava/martian-robots#readme"
+}
