@@ -20,4 +20,19 @@ describe('POST /basestation',  () => {
             .expect('Content-Type', /json/)
             .expect(200, done);
     });
+
+    it('should respond with correct data after executing commands', () => {
+        const baseStationResponse = ['1 2 E'];
+        return request(app)
+            .post('/basestation')
+            .send(basestationCommands)
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .then((response) => {
+                const data = response.body;
+                expect(data).toEqual(baseStationResponse);
+            });
+    });
+
 });

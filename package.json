@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=production node server.js",
     "test": "jest --onlyChanged --detectOpenHandles  --runInBand --verbose",
-    "test-watch": "jest --runInBand --watch --onlyChanged --detectOpenHandles"
+    "test-watch": "jest --runInBand --watch --onlyChanged --detectOpenHandles  --verbose"
   },
   "jest": {
     "testEnvironment": "node"
