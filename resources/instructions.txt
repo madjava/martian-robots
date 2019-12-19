@@ -48,18 +48,18 @@ The application assumes bottom is 0 and left is 0.
 Application is not complete as there are a couple of features that need implementation.
 
 1. Proper validation and better error handling sending meaningfull status codes.
-    a. As this is a service and could be consummed by other clients from the instruction set needs proper validation
+    a. As this is a service and could be consummed by other clients so the instruction set needs proper validation
     b. Errors should be handled properly to prevent service crashing and burning
-    c. Obviously more securuty consideration needs to be put in
+    c. Obviously more security consideration needs to be put in
 
-2. Proper code refactoring. What's here can be better, naming conventions can provide better insight as to what's going on
+2. Proper code refactoring. What's here can be better, naming conventions can provide more insight as to what's going on
 
 3. LOST robots. This, as a critical part of this challenge, is yet to be properly implemented. One idea would
-    be for any robot that falls off the grid to emmit an event, transmitting it's last know location before if falls off.
-    This last good location would be stored my the application and made available when processing other robot instructions, to keep
-    them also falling off grid.
-    An application wide variable, session, an enviroment variable, a Database or even a Redis server can be used to keep track of this information
-4. Information could be transmitted in other formats that JSON for more usability accross varius clients.
+    be for any robot that falls off the grid to emit an event, transmitting it's last know location before it falls off.
+    This last good location would be stored by the application and made available when processing other robot instructions, to keep
+    them also falling off grid. An application wide variable, session, enviroment variable, a Database or even a Redis server can be used to keep track of this information
+
+4. Information could be transmitted in other formats than JSON for more usability across various clients.
 
 
 -------
